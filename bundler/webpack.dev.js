@@ -15,6 +15,7 @@ module.exports = merge(
     {
       host: '0.0.0.0',
       port: portFinderSync.getPort(8080),
+      hot: true,
       contentBase: './dist',
       watchContentBase: true,
       open: true,
@@ -31,6 +32,7 @@ module.exports = merge(
         const domain2 = `http${https}://localhost:${port}`
         console.log(`Project running at:\n  - ${infoColor(domain1)}\n  - ${infoColor(domain2)}`)
       }
-    }
+    },
+    target: 'web'
   }
 )
